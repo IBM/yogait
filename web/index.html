@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="chrome=1">
+		<title>MAX Human Pose Estimator</title>
+
+		<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans" rel="stylesheet">
+
+		<link rel="stylesheet" href="public/css/lib/bootstrap.min.css">
+		<link rel="stylesheet" href="public/css/main.css">
+
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	</head>
+
+	<body background="moz-gradient(180deg, #ffaaae var(--tall), var(--secondary-back) var(--tall))">
+
+		<script src="public/js/lib/cam.js"></script>
+		<script type="module" src="public/js/poseEstimator.js"></script>
+  		<script type="module" src="public/js/coco-common.js"></script>
+		<script type="module" src="public/js/motivation-lines.js"></script>
+		<script type="module" src="public/js/main.js"></script>
+
+		<div class="container">
+			<div class="row header text-center">
+					<div class="row">
+						<h1> Yogait </h1>
+					</div>
+			</div>
+
+			<hr>
+
+			<div class="row text-center" style="position: relative;">
+				<canvas id="canvas" style="position:absolute;" class="hide" width=640 height=480 style="z-index:0"></canvas>
+				<canvas id="pose-canvas" style="padding:20px;position:relative;left:0;top:0;" class="hide" width=640 height=480 style="z-index:1;background-color:transparent"></canvas>
+				<canvas id="text-canvas" style="position:relative;align-content:center;text-align:center;" class="hide" width=640 height=50></canvas>
+				<canvas id="target-canvas" style="align-content:center;padding:20px;" class="hide" width=640 height=480 style="z-index:2;background-color:transparent"></canvas>
+
+			</div>
+
+			<div class="row">
+				<button class="btn btn-primary btn-large btn-block" id="webcamButton"> Begin </button>
+			</div>
+			
+		</div>
+
+		<footer>
+			powered by the <a href="https://developer.ibm.com/exchanges/models/all/max-human-pose-estimator/" target="_blank">MAX Human Pose Estimator</a> | 
+			learn more about the <a href="https://github.imb.com/CODAIT/yogait/" target="_blank">code</a>
+		</footer>
+
+	</body>
+
+</html>

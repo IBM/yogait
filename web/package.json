@@ -1,0 +1,22 @@
+{
+  "name": "age-estimator-tfjs",
+  "version": "1.0.0",
+  "description": "A faster version for facial age estimation web app by Tensorflow.js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": " "
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "child-process": "^1.0.2",
+    "express": "^4.17.1",
+    "file-saver": "^2.0.2",
+    "http": "0.0.0",
+    "python-shell": "^1.0.7"
+  }
+}
