@@ -115,7 +115,6 @@ pre-trained model (located at /assets/classifier.pkl) or retrain it on your own 
 
 1. [Run Jupyter Notebook](#1-run-jupyter-notebook)
 2. [Explore and Train](#2-explore-and-train)
-3. [Test the SVM](#3-test-the-svm)
 
 ### Setting up the MAX Model
 
@@ -213,8 +212,9 @@ Clone the Human Pose Estimation Web App repository locally by running the follow
 > Note: You may need to `cd ..` out of the MAX-Human-Pose-Estimator directory first
 
 Then change directory into the local repository
-
-    cd MAX-Human-Pose-Estimator-Web-App
+```bash
+cd MAX-Human-Pose-Estimator-Web-App
+```
 
 #### 2. Installing dependencies
 
@@ -245,14 +245,14 @@ pip install -r requirements.txt
 #### 3. Running the server
 
 You need to install the dependencies first:
-
-    cd web
-    npm install
-
+```bash
+cd web
+npm install
+```
 You then start the web app by running:
-
-    node app.js
-
+```bash
+node app.js
+```
 You can then access the web app at: [`http://localhost:3000`](http://localhost:3000)
 
 The Human Pose Estimator endpoint must be available at `http://localhost:5000` for the web app to successfully start.

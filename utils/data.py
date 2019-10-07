@@ -33,7 +33,7 @@ def process_images(cartesian=False):
                                     labels.append(d)
                                     lines.append(pose_lines)
 
-                    except Exception as e:
+                    except Exception:
                         print("Something went wrong")
                         traceback.print_exc()
                         break
@@ -59,7 +59,7 @@ def augment_data(features, labels, data_size=15, noise_amount=0.03):
             if label_frequency[1][np.where(label_frequency[0] == labels[i])] < data_size:
                 feature = features[i]
                 new_data = np.zeros((feature.shape), dtype=np.float32)
-                
+
                 # add noise to each body part, making sure to add the same noise to corresponding joints
                 for k, part in enumerate(feature):
                     noise = np.random.normal(0, noise_amount, 2)
