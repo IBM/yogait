@@ -17,9 +17,9 @@ def cart2pol(x, y):
     """
     Convert a Cartesian [x,y] numpy array to a polar [rho, phi] representation.
     """
-    rho = np.sqrt(x**2 + y**2)
+    rho = np.sqrt(x ** 2 + y ** 2)
     phi = np.arctan2(y, x)
-    return(rho, phi)
+    return rho, phi
 
 
 def convert(coordinates):
@@ -38,6 +38,7 @@ def convert(coordinates):
     result[:, 0] = normalize(result[:, 0].reshape(1, -1), norm='max')
     return result
 
+
 def get_pose():
     """
     Submit the pose detection request by calling the rest API.
@@ -53,12 +54,12 @@ def get_pose_from_file(f, d):
     """
     Submit the pose detection request by calling the rest API with a file stored in assets/images.
     """
-    filepath = 'assets/images/'+str(d)+'/'+str(f)
+    filepath = 'assets/images/' + str(d) + '/' + str(f)
 
     with open(filepath, 'rb') as name:
         _, ext = str(f).split('.')
         frame = cv2.imread(filepath)[:, :, ::-1]
-        files = {'file': (filepath, name, 'images/'+ext)}
+        files = {'file': (filepath, name, 'images/' + ext)}
         result = requests.post(URL, files=files).json()
 
     return result, frame
@@ -96,4 +97,4 @@ def get_labels():
     """
     Returns a complete list of labels as per the folders in assets/images.
     """
-    return [name for name in os.listdir(os.getcwd()+'/assets/images') if name != 'test']
+    return [name for name in os.listdir(os.getcwd() + '/assets/images') if name != 'test']
