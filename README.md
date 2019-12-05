@@ -147,7 +147,7 @@ You can also test it on the command line, for example:
 
     curl -F "image=@path/to/pose.jpg" -X POST http://localhost:5000/model/predict
 
-```json
+```
 {
   "status": "ok",
   "predictions": [
@@ -205,15 +205,14 @@ You can also test it on the command line, for example:
 
 #### 1. Check out the code
 
-Clone the Human Pose Estimation Web App repository locally by running the following command:
-
-    git clone https://github.com/IBM/MAX-Human-Pose-Estimator-Web-App
-
-> Note: You may need to `cd ..` out of the MAX-Human-Pose-Estimator directory first
+Clone the Yogait repository locally by running the following command:
+```bash
+git clone https://github.com/IBM/yogait
+```
 
 Then change directory into the local repository
 ```bash
-cd MAX-Human-Pose-Estimator-Web-App
+cd yogait
 ```
 
 #### 2. Installing dependencies
