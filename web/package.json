@@ -1,7 +1,7 @@
 {
-  "name": "age-estimator-tfjs",
+  "name": "Yogait",
   "version": "1.0.0",
-  "description": "A faster version for facial age estimation web app by Tensorflow.js",
+  "description": "A yoga assistant that uses the Human Pose Estimator MAX Model to guess which yoga pose a user is performing.",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
